@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Universal selector */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-image: url("../images/cool-background.png");
+  --second-bg-color: black;
+  --text-color: white;
+  --main-color: cyan;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  /* Here we use /.. to go one level up in file structure. */
+  background-image: var(--bg-image);
+  color: var(--text-color);
+}
+
+.header {
+  /* Background add if you want to */
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 5%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 4rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+}
+
+.navbar a:hover,
+a.active {
+  color: var(--main-color);
+  transition: 0.5s ease-in-out;
+}
+
+#menu-icon {
+  font-size: 4rem;
+  color: var(--text-color);
+  display: none;
+}
