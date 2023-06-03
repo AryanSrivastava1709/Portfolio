@@ -36,3 +36,25 @@ window.onscroll = () =>{
   menuIcon.classList.remove('bx-x');
   navbar.classList.remove('active');
 };
+
+/*  Scroll reveal behaviour */
+ScrollReveal({
+  distance: '80px',
+  duration: 1800,
+  delay: 150
+});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.DP, .portfolio-box, .contact form', { origin: 'bottom'});
+ScrollReveal().reveal('.abt-dp',{scale:1.5});
+ScrollReveal().reveal('.home-content h1, .abt-dp', { origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
+
+/* Typed js */
+
+const typed = new Typed('.multiple-text',{
+  strings: ['Frontend Developer'],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+});

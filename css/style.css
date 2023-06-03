@@ -110,8 +110,20 @@ span {
   width: 28vw;
   border-radius: 50%;
   transition: 0.5s ease;
+  animation: floatImage 4s ease-in-out infinite;
 }
 
+@keyframes floatImage{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-3rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 .DP img:hover {
   cursor: pointer;
   transform: scale(1.1);
