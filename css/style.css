@@ -31,7 +31,7 @@ body {
 }
 
 .header {
-  /* Background add if you want to */
+  background-color: #151019;
   display: flex;
   position: fixed;
   top: 0;
@@ -42,6 +42,10 @@ body {
   align-items: center;
   z-index: 100;
   cursor: pointer;
+}
+
+.header.sticky{
+  border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
 section {
@@ -225,7 +229,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), white);
+  background: linear-gradient(rgba(21, 16, 25, 255), transparent);
   padding: 0 4rem;
   text-align: center;
   transform: translateY(100%);
@@ -260,4 +264,162 @@ span {
 
 .portfolio-box:hover .portfolio-layer {
   transform: translateY(0);
+}
+
+/* Contact section  */
+
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: transparent;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+  caret-color: transparent;
+  transition: 0.3s ease-in-out;
+  border: 1px solid cyan;
+}
+
+/*  to remove spin button */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+  box-shadow: 0 0 2rem 0.6rem cyan;
+  background: rgba(21, 16, 25, 255);
+}
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/* media queries */
+
+@media(max-width :1200px){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media(max-width :991px){
+  .header{
+    padding: 2rem 3%;
+  }
+  
+  section{
+    padding: 10rem 3% 2rem;
+  }
+
+  .contact{
+    min-height: auto;
+  }
+  .portfolio{
+    padding-bottom: 7rem;
+  }
+}
+
+
+@media(max-width :768px){
+  #menu-icon {
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top:100%;
+    left:0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: #151019;
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+  }
+
+  .navbar.active{
+    display: block;
+  }
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .home{
+    flex-direction: column-reverse;
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .DP img{
+    width: 50vw;
+    margin-top: 4rem;
+  }
+
+  .about{
+    flex-direction: column-reverse;
+  }
+  .abt-dp img{
+    width: 50vw;
+    margin-top: 4rem;
+  }
+
+
+  .portfolio h2{
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px){
+  .DP img{
+    width: 70vw;
+  }
+  .abt-dp img{
+    width: 70vw;
+  }
+
 }
